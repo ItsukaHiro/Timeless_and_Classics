@@ -13,8 +13,12 @@ public class CollateralEnchantment extends GunEnchantment
         super(Rarity.RARE, EnchantmentTypes.GUN, new EquipmentSlot[]{EquipmentSlot.MAINHAND}, Type.PROJECTILE);
     }
     @Override
+    public boolean canEnchant(ItemStack stack) {
+        return true;
+    }
+    @Override
     public boolean canApplyAtEnchantingTable(ItemStack stack) {
-        return false;
+        return true;
     }
     @Override
     public int getMinCost(int level)

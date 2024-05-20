@@ -18,7 +18,10 @@ public class BufferedEnchantment extends GunEnchantment
     {
         return 2;
     }
-
+    @Override
+    public boolean canEnchant(ItemStack stack) {
+        return true;
+    }
     @Override
     public int getMinCost(int level)
     {
@@ -26,7 +29,7 @@ public class BufferedEnchantment extends GunEnchantment
     }
     @Override
     public boolean canApplyAtEnchantingTable(ItemStack stack) {
-        return false;
+        return true;
     }
     @Override
     public int getMaxCost(int level)

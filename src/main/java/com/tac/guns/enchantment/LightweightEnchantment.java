@@ -14,6 +14,10 @@ public class LightweightEnchantment extends GunEnchantment
     }
 
     @Override
+    public boolean canEnchant(ItemStack stack) {
+        return true;
+    }
+    @Override
     public int getMinCost(int level)
     {
         return 15;
@@ -25,7 +29,7 @@ public class LightweightEnchantment extends GunEnchantment
     }
     @Override
     public boolean canApplyAtEnchantingTable(ItemStack stack) {
-        return false;
+        return true;
     }
     @Override
     public int getMaxCost(int level)
