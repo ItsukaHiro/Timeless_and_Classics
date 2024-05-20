@@ -100,11 +100,9 @@ public abstract class Attachment
                 outputRadius = modifier.modifyFireSoundRadius(outputRadius);
             }
             if (outputRadius > inputRadius) {
-                addPerkN(negativePerks, "perk.tac.sound_radius.negative", new TranslatableComponent("-")
-                                .append(new TranslatableComponent("perk.tac.sound_radiusv2",Math.round(outputRadius)).withStyle(ChatFormatting.RED)));
+                addPerkN(negativePerks, "perk.tac.sound_radius.negative", new TranslatableComponent("perk.tac.sound_radiusv2",Math.round(outputRadius)).withStyle(ChatFormatting.RED));
             } else if (outputRadius < inputRadius) {
-                addPerkP(positivePerks, "perk.tac.sound_radius.positive", new TranslatableComponent("+")
-                        .append(new TranslatableComponent("perk.tac.sound_radiusv2",Math.round(outputRadius)).withStyle(ChatFormatting.GREEN)));
+                addPerkP(positivePerks, "perk.tac.sound_radius.positive", new TranslatableComponent("perk.tac.sound_radiusv2",Math.round(outputRadius)).withStyle(ChatFormatting.GREEN));
             }
 
             /* Test for additional damage */
