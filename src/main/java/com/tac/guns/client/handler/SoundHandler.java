@@ -57,6 +57,7 @@ public class SoundHandler
         this.playingSounds = ObfuscationReflectionHelper.findField(SoundEngine.class, "f_120226_");
     }
 
+    @SuppressWarnings("unchecked")
     @SubscribeEvent
     public void deafenPlayer(TickEvent.ClientTickEvent event)
     {

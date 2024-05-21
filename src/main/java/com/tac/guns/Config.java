@@ -593,7 +593,7 @@ public class Config
         {
             builder.comment("Blinding properties of stun grenades").push("blind");
             {
-                this.criteria = new EffectCriteria(builder, 15, 220, 10, 170, 0.75, true);
+                this.criteria = new EffectCriteria(builder, 50, 220, 10, 170, 0.75, true);
                 this.blindMobs = builder.comment("If true, hostile mobs will be unable to target entities while they are blinded by a stun grenade.").define("blindMobs", true);
             }
             builder.pop();
@@ -612,7 +612,7 @@ public class Config
         {
             builder.comment("Deafening properties of stun grenades").push("deafen");
             {
-                this.criteria = new EffectCriteria(builder, 15, 280, 100, 360, 0.75, false);
+                this.criteria = new EffectCriteria(builder, 50, 280, 100, 360, 0.75, false);
                 this.panicMobs = builder.comment("If true, peaceful mobs will panic upon being deafened by a stun grenade.").define("panicMobs", true);
             }
             builder.pop();

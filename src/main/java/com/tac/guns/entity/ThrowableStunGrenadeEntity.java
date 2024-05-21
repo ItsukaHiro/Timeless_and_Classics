@@ -4,6 +4,7 @@ import com.tac.guns.Config;
 import com.tac.guns.Config.EffectCriteria;
 import com.tac.guns.init.ModEffects;
 import com.tac.guns.init.ModEntities;
+import com.tac.guns.init.ModItems;
 import com.tac.guns.init.ModSounds;
 import com.tac.guns.network.PacketHandler;
 import com.tac.guns.network.message.MessageStunGrenade;
@@ -17,6 +18,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -43,13 +45,15 @@ public class ThrowableStunGrenadeEntity extends ThrowableGrenadeEntity
     public ThrowableStunGrenadeEntity(EntityType<? extends ThrowableGrenadeEntity> entityType, Level world, LivingEntity player)
     {
         super(entityType, world, player);
-        //this.setItem(new ItemStack(ModItems.STUN_GRENADE.get()));
+        this.setItem(new ItemStack(ModItems.STUN_GRENADE.get()));
     }
 
     public ThrowableStunGrenadeEntity(Level world, LivingEntity player, int maxCookTime)
     {
         super(ModEntities.THROWABLE_STUN_GRENADE.get(), world, player);
-        //this.setItem(new ItemStack(ModItems.STUN_GRENADE.get()));
+        this.setItem(new ItemStack(ModItems.STUN_GRENADE.get()));
+        this.setShouldBounce(true);
+        this.setGravityVelocity(0.03F);
         this.setMaxLife(maxCookTime);
     }
 
