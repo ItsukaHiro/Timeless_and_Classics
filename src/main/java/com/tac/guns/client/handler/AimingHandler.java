@@ -244,9 +244,8 @@ public class AimingHandler {
         if(!isRenderingHand) {
             Minecraft mc = Minecraft.getInstance();
             double modifier = MathUtil.fovToMagnification(event.getFOV(), mc.options.fov);
-            double originSen = mc.options.sensitivity;
-            double a = originSen * 0.6D + 0.2D;
-            double newSen = (Math.cbrt((a*a*a) / modifier) - 0.2D) / 0.6D;
+            double a = mc.options.sensitivity * 0.6D + 0.2D;
+            double newSen = (Math.cbrt((a*a*a / modifier)) - 0.2D) / 0.6D;
             ((MouseSensitivityModifier) mc.mouseHandler).setSensitivity(newSen);
         }
     }

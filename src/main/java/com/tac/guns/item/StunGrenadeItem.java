@@ -34,5 +34,6 @@ public class StunGrenadeItem extends GrenadeItem
     protected void onThrown(Level world, ThrowableGrenadeEntity entity)
     {
         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ModSounds.ITEM_GRENADE_PIN.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ModSounds.STUN_GRENADE_CALLOUT.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
     }
 }

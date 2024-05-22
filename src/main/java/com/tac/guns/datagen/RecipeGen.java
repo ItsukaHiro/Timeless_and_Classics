@@ -355,6 +355,12 @@ public class RecipeGen extends RecipeProvider
                 .addIngredient(Tags.Items.GUNPOWDER, 2)
                 .build(consumer);
 
+        WorkbenchRecipeBuilder.workbenchRecipe(ModItems.STUN_GRENADE.get(), 2)
+                .addIngredient(Tags.Items.INGOTS_IRON,4)
+                .addIngredient(Tags.Items.GUNPOWDER,3)
+                .addIngredient(Tags.Items.DUSTS_GLOWSTONE,5)
+                .build(consumer);
+
         //Scope
         WorkbenchRecipeBuilder.workbenchRecipe(ModItems.STANDARD_6_10x_SCOPE.get())
                 .addIngredient(Tags.Items.INGOTS_IRON, 36)

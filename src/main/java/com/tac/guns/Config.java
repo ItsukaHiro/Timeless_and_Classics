@@ -426,7 +426,7 @@ public class Config
                 this.armorBluntDamage = builder.comment("All weapons have a percentage of damage applied, no matter the class match up, false means blunt damage is never applied before armor calc.").define("armorBluntDamage", true);
 
                 this.forceCameraShakeOnFire = builder.comment("Force camera shake on for all players, since control over the weapon is reduced with this off, having a client only options could lead to balance issues.").define("forceCameraShakeOnFire",
-                        false);
+                        true);
                 this.canSeeLaserThirdSight = builder.comment("Allow players to see the laser sight when they are third person sight, false means they can't see it.").define("canSeeLaserThirdSight", true);
                 this.glassDrop = builder.comment("Allow glass to be dropped, false means it will be totally broken.").define("glassDrop", true);
             }
@@ -499,7 +499,7 @@ public class Config
         {
             builder.comment("Properties relating to network").push("network");
             {
-                this.projectileTrackingRange = builder.comment("The distance players need to be within to be able to track new projectiles trails. Higher values means you can see projectiles from that start from further away.").defineInRange("projectileTrackingRange", 200.0, 1, Double.MAX_VALUE);
+                this.projectileTrackingRange = builder.comment("The distance players need to be within to be able to track new projectiles trails. Higher values means you can see projectiles from that start from further away.").defineInRange("projectileTrackingRange", 256.0, 1, Double.MAX_VALUE);
             }
             builder.pop();
         }
@@ -521,7 +521,7 @@ public class Config
             {
                 this.enabled = builder.comment("If true, nearby mobs are angered and/or scared by the firing of guns.").define("enabled", true);
                 this.angerHostileMobs = builder.comment("If true, in addition to causing peaceful mobs to panic, firing a gun will also cause nearby hostile mobs to target the shooter.").define("angerHostileMobs", true);
-                this.range = builder.comment("Any mobs within a sphere of this radius will aggro on the shooter of an unsilenced gun.").defineInRange("unsilencedRange", 20.0, 0.0, Double.MAX_VALUE);
+                this.range = builder.comment("Any mobs within a sphere of this radius will aggro on the shooter of an unsilenced gun.").defineInRange("unsilencedRange", 24.0, 0.0, Double.MAX_VALUE);
                 this.exemptEntities = builder.comment("Any mobs of defined will not aggro on shooters").defineList("exemptMobs", Collections.emptyList(), o -> true);
             }
             builder.pop();
@@ -593,7 +593,7 @@ public class Config
         {
             builder.comment("Blinding properties of stun grenades").push("blind");
             {
-                this.criteria = new EffectCriteria(builder, 50, 220, 10, 170, 0.75, true);
+                this.criteria = new EffectCriteria(builder, 50, 120, 10, 170, 0.75, true);
                 this.blindMobs = builder.comment("If true, hostile mobs will be unable to target entities while they are blinded by a stun grenade.").define("blindMobs", true);
             }
             builder.pop();
@@ -612,7 +612,7 @@ public class Config
         {
             builder.comment("Deafening properties of stun grenades").push("deafen");
             {
-                this.criteria = new EffectCriteria(builder, 50, 280, 100, 360, 0.75, false);
+                this.criteria = new EffectCriteria(builder, 25, 100, 0, 360, 0, false);
                 this.panicMobs = builder.comment("If true, peaceful mobs will panic upon being deafened by a stun grenade.").define("panicMobs", true);
             }
             builder.pop();
@@ -687,10 +687,10 @@ public class Config
             {
                 builder.comment("Stun Grenade related properties").push("grenade");
                 {
-                    this.alphaOverlay = builder.comment("After the duration drops to this many ticks, the transparency of the overlay when blinded will gradually fade to 0 alpha.").defineInRange("alphaOverlay", 255, 0, 255);
-                    this.alphaFadeThreshold = builder.comment("Transparency of the overlay when blinded will be this alpha value, before eventually fading to 0 alpha.").defineInRange("alphaFadeThreshold", 40, 0, Integer.MAX_VALUE);
-                    this.soundPercentage = builder.comment("Volume of most game sounds when deafened will play at this percent, before eventually fading back to %100.").defineInRange("soundPercentage", 0.05, 0.0, 1.0);
-                    this.soundFadeThreshold = builder.comment("After the duration drops to this many ticks, the ringing volume will gradually fade to 0 and other sound volumes will fade back to %100.").defineInRange("soundFadeThreshold", 90, 0, Integer.MAX_VALUE);
+                    this.alphaOverlay = builder.comment("Transparency of the overlay when blinded will be this alpha value, before eventually fading to 0 alpha.").defineInRange("alphaOverlay", 255, 0, 255);
+                    this.alphaFadeThreshold = builder.comment("After the duration drops to this many ticks, the transparency of the overlay when blinded will gradually fade to 0 alpha.").defineInRange("alphaFadeThreshold", 80, 0, Integer.MAX_VALUE);
+                    this.soundPercentage = builder.comment("Volume of most game sounds when deafened will play at this percent, before eventually fading back to %100.").defineInRange("soundPercentage", 0.00, 0.0, 1.0);
+                    this.soundFadeThreshold = builder.comment("After the duration drops to this many ticks, the ringing volume will gradually fade to 0 and other sound volumes will fade back to %100.").defineInRange("soundFadeThreshold", 50, 0, Integer.MAX_VALUE);
                     this.ringVolume = builder.comment("Volume of the ringing sound when deafened will play at this volume, before eventually fading to 0.").defineInRange("ringVolume", 1.0, 0.0, 1.0);
                 }
                 builder.pop();
@@ -698,7 +698,7 @@ public class Config
                 builder.comment("Audio properties").push("audio");
                 {
                     this.gunShotMaxDistance = builder.comment("The maximum distance weapons can be heard by players.").defineInRange("gunShotMaxDistance", 100, 0, Double.MAX_VALUE);
-                    this.reloadingSoundDistance = builder.comment("The maximum distance reloading a weapon can be heard by players.").defineInRange("reloadingSoundDistance", 14, 0, Double.MAX_VALUE);
+                    this.reloadingSoundDistance = builder.comment("The maximum distance reloading a weapon can be heard by players.").defineInRange("reloadingSoundDistance", 18, 0, Double.MAX_VALUE);
                 }
                 builder.pop();
 

@@ -156,6 +156,7 @@
 
     "item.tac.light_grenade": "F1 Grenade",
     "item.tac.baseball_grenade": "M67 Grenade",
+    "item.tac.stun_grenade": "Flashbang",
     "item.tac.grenade40mm": "40mm Grenade",
 
     "block.tac.box45": "Box of .45 ACP Bullets (x16)",
@@ -391,8 +392,9 @@
     "subtitle.tac.fire": "Gunfire",
     "subtitle.tac.fire.silenced": "Silenced gunfire",
     "subtitle.tac.reload": "Reloading",
-    "subtitle.tac.grenade.pin": "Grenade Pin",
     "subtitle.tac.attach": "Attachment Attach",
+    "subtitle.tac.grenade.pin": "Grenade Pin Removed",
+    "subtitle.tac.throw.flashbang": "THORWING A FLASHBANG!!!",
 
     "tac.option_list.no_items": "No Items",
     "tac.options.adsSensitivity": "ADS Sensitivity",

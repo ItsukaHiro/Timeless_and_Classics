@@ -2403,18 +2403,37 @@
       ]
    },
 
+   "ui.weapon.attach": {
+      "subtitle": "ui.weapon.attach",
+      "sounds": [
+         { "name": "tac:ui.weapon/attach"}
+      ]
+   },
 
+   "grenade.pin" : {
+      "subtitle": "subtitle.tac.grenade.pin",
+      "sounds": [
+         { "name": "tac:grenade/remove_pin"}
+      ]
+   },
+
+   "stun.throw.flashbang": {
+      "subtitle": "stun.throw.flashbang",
+      "sounds": [
+         { "name": "tac:grenade/flashbang_callout"}
+      ]
+   },
 
    "stun.ring": {
-      "subtitle": "stun_grenade_ringing",
+      "subtitle": "subtitle.tac.stun.ring",
       "sounds": [
-         { "name": "tac:entity/stun_grenade/ring"}
+         { "name": "tac:grenade/ringing"}
       ]
    },
    "stun.explosion": {
-      "subtitle": "stun_grenade_exploded",
+      "subtitle": "subtitle.tac.stun.explosion",
       "sounds": [
-         { "name": "tac:entity/stun_grenade/explosion"}
+         { "name": "tac:grenade/stun_explosion"}
       ]
    }
 }
