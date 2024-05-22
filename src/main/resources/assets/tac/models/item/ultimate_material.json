@@ -1,1 +1,7 @@
-{	"credit":"Made with Blockbench",	"parent":"item/generated",	"textures":{		"layer0":"tac:items/material/ultimate_material"	}}
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "tac:items/material/ultimate_material"
+	}
+}
