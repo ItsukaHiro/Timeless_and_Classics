@@ -1,7 +1,1 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "tac:items/material/epic_material"
-	}
-}
+{	"credit":"Made with Blockbench",	"parent":"item/generated",	"textures":{		"layer0":"tac:items/material/epic_material"	}}

@@ -1,8 +1,1 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tac:items/extended_mag_2"
-  },
-  "display": {
-  }
-}
+{"parent":"item/generated","textures":{"layer0":"tac:items/extended_mag_2"},"display":{}}

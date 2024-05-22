@@ -1,8 +1,1 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "tac:items/hotbar_icons/b_50ae"
-	},
-	"display": {
-	}
-}
+{	"parent":"item/generated",	"textures":{		"layer0":"tac:items/hotbar_icons/b_50ae"	},	"display":{	}}
